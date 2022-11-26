@@ -1,0 +1,19 @@
+name: test-ghactions
+on:
+  push:
+    branches-ignore:
+      - 'dependabot/**' #avoid duplicates: only run the PR, not the commit
+      - 'gh-pages' #github pages do not trigger all tests
+    tags-ignore:
+      - 'v*' #avoids rerun existing commit on release
+  pull_request:
+    branches:
+      - 'main'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        run: |
+          chmod ugo+x main-script.sh
+          ./main-script.sh
