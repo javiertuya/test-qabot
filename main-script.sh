@@ -5,5 +5,5 @@ echo "this is line1pass"
 echo "this is line2pass"
 echo "this is line3pass"
 echo "ending"
-exit 0
+exit 1
 #end
