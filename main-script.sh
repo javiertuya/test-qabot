@@ -4,6 +4,6 @@ echo "this is line0fail"
 echo "this is line1pass"
 echo "this is line2pass"
 echo "this is line3pass"
-echo "ending"
+echo "endings"
 exit 0
 #end
